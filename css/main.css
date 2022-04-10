@@ -1,0 +1,327 @@
+ *{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+ 
+  body{
+    background-image: url('../img/fondo.azul.jpg');
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: cover;
+ }
+
+
+
+/* Index */
+ 
+ .titulo{   
+      color: white;
+      text-align: center;
+      padding: 5px;
+      width: auto;
+      height: auto;
+      font-family: 'Permanent Marker', cursive;
+      font-size: 70px;
+    }
+
+  ul{
+      text-align: center;
+  }  
+
+ .menu li {
+     background-color: green;
+     display: inline-block;
+     padding: 5px;
+     margin: 3px;
+     text-transform: uppercase;
+     text-align: center;
+     border-radius: 50px;  
+}
+
+ a{
+     text-decoration: none;
+     color: white;
+}
+
+ h2{
+     color: #ECF0F1;
+     text-align: center;
+     padding: 10px;
+ }
+
+
+
+ .subtituloUno{
+     color: green;
+     margin: 5px;
+     padding: 5px;
+     border: 1px;
+     border-radius: 10px;
+     background-color: black;
+     text-align: center;
+     font-family: 'Bungee' cursive;
+     
+ }
+
+ .colorParrafo{
+    
+     color: rgb(247, 240, 240) ;
+     text-decoration: double;
+     margin: 5px;
+     padding: 2px;
+}
+
+.recuadro{
+    padding: 2px;
+    margin: 1px;
+    border: 4px solid green;
+    margin-top: 5px;
+    width: 400px;
+    overflow: visible;
+    
+}
+
+
+.recuadroUno{
+    padding: 2px;
+    margin: 2px;
+    border: 4px solid green;
+    margin-top: 5px;
+    width: 400px;
+    overflow: visible;
+}
+
+.recuadroDos{
+    padding: 2px;
+    margin: 2px;
+    border: 4px solid green;
+    margin-top: 5px;
+    width: 400px;
+    overflow: visible;
+}
+
+.multimedia{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 40px;
+    padding: 10px;
+    
+}
+
+.multimediaVideo{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 40px;
+    padding: 10px;
+}
+
+.imagen{
+    
+    border: 2px solid green;
+    height: 300px;
+    width: 300px;
+}
+
+.video{
+    
+    height: 300px;
+    width: 500;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 50px;
+    border: 3px solid green;
+    
+}
+    
+.mainPrincipal{
+    height: center;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "recuadro recuadroUno recuadroDos"
+                          "logo video . ";
+                        
+    }
+
+.recuadro{
+    grid-area: recuadro;
+}
+
+.recuadroUno{
+    grid-area: recuadroUno;
+}
+
+.recuadroDos{
+    grid-area: recuadroDos;
+}
+
+.multimedia{
+    grid-area: logo;
+}
+
+.multimediaVideo{
+    grid-area: video;                                                
+}
+
+footer{
+    
+    background-color: rgb(38, 102, 57);
+    border: 5px solid black;
+    color: black;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.footerLogos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.logoRedes{
+    
+    height: 50px;
+    width: 50px;
+}
+
+
+/* NOSOTROS */
+
+.quienSoy{
+    
+    margin: 10px;
+    padding: 10px;
+    background-color: black;
+    color: green;
+    border-radius: 10px;
+    border: 2px solid green;
+    text-align: center;
+    width: 200px;
+}
+
+.nosotros{
+    border: 2px solid green;
+    color: rgb(247, 240, 240);
+    margin: 10px;
+    padding: 10px;
+}
+
+.profeFabri{
+    border: 5px solid green;
+    margin: 10px;
+    padding: 10px;
+    height: auto;
+    width: auto;
+}
+
+/* CLASES */
+
+.clases{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid green;
+    color: rgb(247, 240, 240);
+}
+
+.videos{
+    display: flex;
+    justify-content: center;
+}
+
+.videoClase{
+    border: 5px solid green;
+    margin: 10px;
+    padding: 2px;
+}
+
+/* FRODITIPS */
+
+.tips{
+    border: 2px solid green;
+    border-radius: 5px;
+    color: rgb(247, 240, 240);
+    margin: 10px;
+    padding: 5px;
+}
+
+
+/* CONTACTO */
+
+.textoContacto{
+    padding: 5px;
+    margin: 10px;
+    border: 3px solid green;
+    color: rgb(247, 240, 240);
+}
+
+.contacto{
+    margin: 10px;
+    padding: 5px;
+    border: 3px solid green;
+    color: rgb(231, 223, 221);
+    width: 900px;
+}
+
+.formulario div{
+    margin: 5px;
+    padding: 3px;
+}
+
+
+form{
+    border: none;
+}
+
+/* posible trabajo, para abajo se puede borrar todo y queda como la pagina original */
+
+
+@media only screen and (max-width:900px){
+    
+
+
+
+.mainPrincipal{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "recuadro recuadroUno"
+                          "logo multimediaVideo";
+    justify-content: center;                      
+}
+
+
+h2{
+    display: none;
+}
+
+.recuadroDos{
+    display: none;
+}
+
+.recuadro{
+    grid-area: recuadro;
+    font-size: 1rem;
+}
+
+.recuadroUno{
+    grid-area: recuadroUno;
+}
+
+.multimedia{
+    grid-area: logo;
+    
+}
+
+.multimediaVideo{
+    grid-area: multimediaVideo;
+    
+}
+
+}
