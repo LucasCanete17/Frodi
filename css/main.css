@@ -220,6 +220,16 @@ footer{
     width: auto;
 }
 
+/* transformaciones imagen "Nosotros"*/
+
+.profeFabri:hover{
+    transform: scale(1.1);  
+}
+
+.profeFabri{
+    transition: 1.5s;
+}
+
 /* CLASES */
 
 .clases{
