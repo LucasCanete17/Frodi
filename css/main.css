@@ -116,8 +116,8 @@
 .imagen{
     
     border: 2px solid green;
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
 }
 
 .video{
@@ -139,7 +139,7 @@
     margin: 50px;
     grid-template-areas: "mainTitulo mainTitulo mainTitulo"
                         "recuadro recuadroUno recuadroDos"
-                        "logo video .";
+                        "imagen1 imagen2 imagen3";
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     row-gap: 3rem;                                
@@ -163,13 +163,18 @@
     width: 100%;
 }
 
-.multimedia{
-    grid-area: logo;
+.multimediaUno{
+    grid-area: imagen1;
+    align-self: center;
+}
+.multimediaDos{
+    grid-area: imagen2;
     align-self: center;
 }
 
-.multimediaVideo{
-    grid-area: video;                                              
+.multimediaTres{
+        grid-area: imagen3;
+        align-self: center;
 }
 
 
@@ -181,6 +186,8 @@ footer{
     margin: 10px;
     padding: 5px;
     text-align: center;
+    position: relative;
+
 }
 
 .footerLogos{
@@ -327,8 +334,11 @@ form{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "recuadro recuadroUno"
-                          "logo multimediaVideo";
-    justify-content: center;                      
+                          "imagen1 imagen2"
+                          "footer footer";                      
+    justify-content: center;
+    row-gap: 3rem;            
+    
 }
 
 
@@ -337,6 +347,10 @@ h2{
 }
 
 .recuadroDos{
+    display: none;
+}
+
+.multimediaTres{
     display: none;
 }
 
@@ -349,14 +363,18 @@ h2{
     grid-area: recuadroUno;
 }
 
-.multimedia{
-    grid-area: logo;
+.multimediaUno{
+    grid-area: imagen1;
     
 }
 
-.multimediaVideo{
-    grid-area: multimediaVideo;
+.multimediaDos{
+    grid-area: imagen2;
     
+}
+
+footer{
+    grid-area: footer;
 }
 
 }
