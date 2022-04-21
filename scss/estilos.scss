@@ -1,0 +1,140 @@
+// aplicando sass
+
+body{
+    background-image: url('../img/fondo.azul.jpg');
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    .titulo{
+        color: white;
+        text-align: center;
+        padding: 5px;
+        width: 100%;
+        height: 100%;
+        font-family: 'Permanent Marker' cursive;
+        font-size: 70px;
+    }
+}
+
+header{
+    .colorNav{
+        background-color: rgb(214, 207, 207);
+        .logoBarra{
+            max-width: 90px;
+            height: 90px; 
+        }
+    }
+}
+
+main{
+    .segundoTitulo{
+        color: #ECF0F1;
+        text-align: center;
+        padding: 10px;
+    }
+    div{
+        .imagen{
+            border: 2px solid green;
+            height: 400px;
+            width: 400px;
+        }
+    }
+}
+
+.recuadro, .recuadroUno, .recuadroDos{
+    padding: 2px;
+    margin: 1px;
+    border: 4px solid green;
+    margin-top: 5px;
+    .subtituloUno{
+        color: green;
+        margin: 5px;
+        padding: 5px;
+        border: 1px;
+        border-radius: 10px;
+        background-color: black;
+        text-align: center;
+        font-family: 'Bungee' cursive;
+    }
+}
+
+.colorParrafo{
+    color: rgb(247, 240, 240) ;
+    text-decoration: double;
+    margin: 5px;
+    padding: 2px;
+}
+
+.mainPrincipal{
+    height: 100%;
+    display: grid;
+    margin: 50px;
+    grid-template-areas: "mainTitulo mainTitulo mainTitulo"
+                        "recuadro recuadroUno recuadroDos"
+                        "imagen1 imagen2 imagen3";
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    row-gap: 3rem;
+}
+
+.mainTitulo{
+    grid-area: mainTitulo;
+}
+.recuadro{
+    grid-area: recuadro;
+    width: 100%;
+}
+
+.recuadroUno{
+    grid-area: recuadroUno;
+    width: 100%;
+}
+
+.recuadroDos{
+    grid-area: recuadroDos;
+    width: 100%;
+}
+
+.multimediaUno{
+    grid-area: imagen1;
+    align-self: center;
+}
+.multimediaDos{
+    grid-area: imagen2;
+    align-self: center;
+}
+
+.multimediaTres{
+        grid-area: imagen3;
+        align-self: center;
+}
+
+footer{
+    background-color: rgb(38, 102, 57);
+    border: 5px solid black;
+    color: black;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    .footerLogos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style: none;
+        .logoRedes{
+            height: 50px;
+            width: 50px;
+        }
+    }
+}
+
+.logoRedes:hover{
+    transform: scale(1.1);
+    .logoRedes{
+        transition: 1.5s;
+    }
+
+}

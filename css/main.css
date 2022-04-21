@@ -1,380 +1,110 @@
- *{
-     padding: 0;
-     margin: 0;
-     box-sizing: border-box;
- }
- 
-  body{
-    background-image: url('../img/fondo.azul.jpg');
-    background-repeat: no-repeat;
-    background-color: black;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
- }
-
-
-
-/* Index */
- 
- .titulo{   
-      color: white;
-      text-align: center;
-      padding: 5px;
-      width: 100%;
-      height: 100%;
-      font-family: 'Permanent Marker', cursive;
-      font-size: 70px;
-    }
-
-  ul{
-      text-align: center;
-  }  
-
- .menu li {
-     background-color: green;
-     display: inline-block;
-     padding: 5px;
-     margin: 3px;
-     text-transform: uppercase;
-     text-align: center;
-     border-radius: 50px;  
-}
-
- a{
-     text-decoration: none;
-     color: white;
-}
-
- .segundoTitulo{
-     color: #ECF0F1;
-     text-align: center;
-     padding: 10px;
- }
-
-
-
- .subtituloUno{
-     color: green;
-     margin: 5px;
-     padding: 5px;
-     border: 1px;
-     border-radius: 10px;
-     background-color: black;
-     text-align: center;
-     font-family: 'Bungee' cursive;
-     
- }
-
- .colorParrafo{
-    
-     color: rgb(247, 240, 240) ;
-     text-decoration: double;
-     margin: 5px;
-     padding: 2px;
-}
-
-.recuadro{
-    padding: 2px;
-    margin: 1px;
-    border: 4px solid green;
-    margin-top: 5px;
-}
-
-
-.recuadroUno{
-    padding: 2px;
-    margin: 2px;
-    border: 4px solid green;
-    margin-top: 5px;
-}
-
-.recuadroDos{
-    padding: 2px;
-    margin: 2px;
-    border: 4px solid green;
-    margin-top: 5px;
-}
-/*
-.multimedia{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin: 40px;
-    padding: 10px;
-    
-}
-
-.multimediaVideo{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin: 40px;
-    padding: 10px;
-}*/
-
-.imagen{
-    
-    border: 2px solid green;
-    height: 400px;
-    width: 400px;
-}
-
-.video{
-    /*
-    height: 300px;
-    width: 500;*/
-    overflow: visible;
-    width: 100%;
-    margin: 10px;
-    padding: 5px;
-    border-radius: 50px;
-    border: 3px solid green;
-    
-}
-
-.mainPrincipal{
-    height: 100%;
-    display: grid;
-    margin: 50px;
-    grid-template-areas: "mainTitulo mainTitulo mainTitulo"
-                        "recuadro recuadroUno recuadroDos"
-                        "imagen1 imagen2 imagen3";
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    row-gap: 3rem;                                
-} 
-
-.mainTitulo{
-    grid-area: mainTitulo;
-}
-.recuadro{
-    grid-area: recuadro;
-    width: 100%;
-}
-
-.recuadroUno{
-    grid-area: recuadroUno;
-    width: 100%;
-}
-
-.recuadroDos{
-    grid-area: recuadroDos;
-    width: 100%;
-}
-
-.multimediaUno{
-    grid-area: imagen1;
-    align-self: center;
-}
-.multimediaDos{
-    grid-area: imagen2;
-    align-self: center;
-}
-
-.multimediaTres{
-        grid-area: imagen3;
-        align-self: center;
-}
-
-
-footer{
-    
-    background-color: rgb(38, 102, 57);
-    border: 5px solid black;
-    color: black;
-    margin: 10px;
-    padding: 5px;
+body {
+  background-image: url("../img/fondo.azul.jpg");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: cover;
+  width: 100%;
+  height: 100%; }
+  body .titulo {
+    color: white;
     text-align: center;
-    position: relative;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    font-family: 'Permanent Marker' cursive;
+    font-size: 70px; }
 
-}
+header .colorNav {
+  background-color: #d6cfcf; }
+  header .colorNav .logoBarra {
+    max-width: 90px;
+    height: 90px; }
 
-.footerLogos{
+main .segundoTitulo {
+  color: #ECF0F1;
+  text-align: center;
+  padding: 10px; }
+
+main div .imagen {
+  border: 2px solid green;
+  height: 400px;
+  width: 400px; }
+
+.recuadro, .recuadroUno, .recuadroDos {
+  padding: 2px;
+  margin: 1px;
+  border: 4px solid green;
+  margin-top: 5px; }
+  .recuadro .subtituloUno, .recuadroUno .subtituloUno, .recuadroDos .subtituloUno {
+    color: green;
+    margin: 5px;
+    padding: 5px;
+    border: 1px;
+    border-radius: 10px;
+    background-color: black;
+    text-align: center;
+    font-family: 'Bungee' cursive; }
+
+.colorParrafo {
+  color: #f7f0f0;
+  text-decoration: double;
+  margin: 5px;
+  padding: 2px; }
+
+.mainPrincipal {
+  height: 100%;
+  display: grid;
+  margin: 50px;
+  grid-template-areas: "mainTitulo mainTitulo mainTitulo" "recuadro recuadroUno recuadroDos" "imagen1 imagen2 imagen3";
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  row-gap: 3rem; }
+
+.mainTitulo {
+  grid-area: mainTitulo; }
+
+.recuadro {
+  grid-area: recuadro;
+  width: 100%; }
+
+.recuadroUno {
+  grid-area: recuadroUno;
+  width: 100%; }
+
+.recuadroDos {
+  grid-area: recuadroDos;
+  width: 100%; }
+
+.multimediaUno {
+  grid-area: imagen1;
+  align-self: center; }
+
+.multimediaDos {
+  grid-area: imagen2;
+  align-self: center; }
+
+.multimediaTres {
+  grid-area: imagen3;
+  align-self: center; }
+
+footer {
+  background-color: #266639;
+  border: 5px solid black;
+  color: black;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  position: relative; }
+  footer .footerLogos {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    list-style: none;
-}
+    list-style: none; }
+    footer .footerLogos .logoRedes {
+      height: 50px;
+      width: 50px; }
 
-.logoRedes{
-    
-    height: 50px;
-    width: 50px;
-}
-
-.logoRedes:hover{
-    transform: scale(1.1);  
-}
-
-.logoRedes{
-    transition: 1.5s;
-}
-
-/* NOSOTROS */
-
-.quienSoy{
-    
-    margin: 10px;
-    padding: 10px;
-    background-color: black;
-    color: green;
-    border-radius: 10px;
-    border: 2px solid green;
-    text-align: center;
-    width: 200px;
-}
-
-.nosotros{
-    border: 2px solid green;
-    color: rgb(247, 240, 240);
-    margin: 10px;
-    padding: 10px;
-}
-
-.profeFabri{
-    border: 5px solid green;
-    margin: 10px;
-    padding: 10px;
-    height: auto;
-    width: auto;
-}
-
-/* transformaciones imagen "Nosotros"*/
-
-.profeFabri:hover{
-    transform: scale(1.1);  
-}
-
-.profeFabri{
-    transition: 1.5s;
-}
-
-/* CLASES */
-
-.clases{
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid green;
-    color: rgb(247, 240, 240);
-}
-
-.videos{
-    display: flex;
-    justify-content: center;
-}
-
-.videoClase{
-    border: 5px solid green;
-    margin: 10px;
-    padding: 2px;
-}
-
-.logoBarra{
-    max-width: 90px;
-    height: 90px;
-}
-
-.colorNav{
-    background-color: rgb(214, 207, 207);
-}
-
-.fondoClases{
-    background-color: transparent;
-}
-
-/* FRODITIPS */
-
-.tips{
-    border: 2px solid green;
-    border-radius: 5px;
-    color: rgb(247, 240, 240);
-    margin: 10px;
-    padding: 5px;
-}
-
-
-/* CONTACTO */
-
-.textoContacto{
-    padding: 5px;
-    margin: 10px;
-    border: 3px solid green;
-    color: rgb(247, 240, 240);
-}
-
-.contacto{
-    margin: 10px;
-    padding: 5px;
-    border: 3px solid green;
-    color: rgb(231, 223, 221);
-}
-
-.formulario div{
-    margin: 5px;
-    padding: 3px;
-}
-
-
-form{
-    border: none;
-}
-
-/* posible trabajo, para abajo se puede borrar todo y queda como la pagina original */
-
-
-@media only screen and (max-width:900px){
-    
-
-
-
-.mainPrincipal{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "recuadro recuadroUno"
-                          "imagen1 imagen2"
-                          "footer footer";                      
-    justify-content: center;
-    row-gap: 3rem;            
-    
-}
-
-
-h2{
-    display: none;
-}
-
-.recuadroDos{
-    display: none;
-}
-
-.multimediaTres{
-    display: none;
-}
-
-.recuadro{
-    grid-area: recuadro;
-    font-size: 1rem;
-}
-
-.recuadroUno{
-    grid-area: recuadroUno;
-}
-
-.multimediaUno{
-    grid-area: imagen1;
-    
-}
-
-.multimediaDos{
-    grid-area: imagen2;
-    
-}
-
-footer{
-    grid-area: footer;
-}
-
-}
+.logoRedes:hover {
+  transform: scale(1.1); }
+  .logoRedes:hover .logoRedes {
+    transition: 1.5s; }
