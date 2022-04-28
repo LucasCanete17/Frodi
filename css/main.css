@@ -1,3 +1,8 @@
+.recuadro .subtituloUno, .recuadroUno .subtituloUno, .recuadroDos .subtituloUno {
+  border: 1px;
+  border-radius: 10px;
+  background-color: black; }
+
 body {
   background-image: url("../img/fondo.azul.jpg");
   background-repeat: no-repeat;
@@ -39,9 +44,6 @@ main div .imagen {
     color: green;
     margin: 5px;
     padding: 5px;
-    border: 1px;
-    border-radius: 10px;
-    background-color: black;
     text-align: center;
     font-family: 'Bungee' cursive; }
 

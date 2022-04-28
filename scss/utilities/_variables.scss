@@ -1,0 +1,20 @@
+$borde-texto: 4px solid green;
+
+
+@mixin grid {
+    height: 100%;
+    display: grid;
+    margin: 50px;
+    grid-template-areas: "mainTitulo mainTitulo mainTitulo"
+                        "recuadro recuadroUno recuadroDos"
+                        "imagen1 imagen2 imagen3";
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    row-gap: 3rem;
+}
+
+%borde{
+    border: 1px;
+    border-radius: 10px;
+    background-color: black;
+}

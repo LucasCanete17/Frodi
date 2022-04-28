@@ -1,5 +1,7 @@
 // aplicando sass
 
+@import "utilities/variables";
+
 body{
     background-image: url('../img/fondo.azul.jpg');
     background-repeat: no-repeat;
@@ -46,15 +48,13 @@ main{
 .recuadro, .recuadroUno, .recuadroDos{
     padding: 2px;
     margin: 1px;
-    border: 4px solid green;
+    border: $borde-texto;
     margin-top: 5px;
     .subtituloUno{
         color: green;
         margin: 5px;
         padding: 5px;
-        border: 1px;
-        border-radius: 10px;
-        background-color: black;
+        @extend %borde;
         text-align: center;
         font-family: 'Bungee' cursive;
     }
@@ -68,15 +68,7 @@ main{
 }
 
 .mainPrincipal{
-    height: 100%;
-    display: grid;
-    margin: 50px;
-    grid-template-areas: "mainTitulo mainTitulo mainTitulo"
-                        "recuadro recuadroUno recuadroDos"
-                        "imagen1 imagen2 imagen3";
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    row-gap: 3rem;
+    @include grid;
 }
 
 .mainTitulo{
