@@ -39,8 +39,6 @@ main{
     div{
         .imagen{
             border: 2px solid green;
-            height: 400px;
-            width: 400px;
         }
     }
 }
@@ -48,7 +46,7 @@ main{
 .recuadro, .recuadroUno, .recuadroDos{
     padding: 2px;
     margin: 1px;
-    border: $borde-texto;
+    @extend %borde;
     margin-top: 5px;
     .subtituloUno{
         color: green;
@@ -130,3 +128,183 @@ footer{
     }
 
 }
+
+// media query
+
+@media only screen and (max-width:900px){
+
+.mainPrincipal{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "recuadro recuadroUno"
+                          "imagen1 imagen2"
+                          "footer footer";                      
+    justify-content: center;
+    row-gap: 3rem;            
+    
+}
+
+
+h2{
+    display: none;
+}
+
+.recuadroDos{
+    display: none;
+}
+
+.multimediaTres{
+    display: none;
+}
+
+.recuadro{
+    grid-area: recuadro;
+    font-size: 1rem;
+}
+
+.recuadroUno{
+    grid-area: recuadroUno;
+}
+
+.multimediaUno{
+    grid-area: imagen1;
+    
+}
+
+.multimediaDos{
+    grid-area: imagen2;
+    
+}
+
+footer{
+    grid-area: footer;
+}
+}
+
+/* NOSOTROS */
+
+.quienSoy{
+    margin: 10px;
+    padding: 10px;
+    background-color: black;
+    @extend %borde;
+    text-align: center;
+    width: 200px;
+    color: green;
+}
+.nosotros{
+    border: $borde-texto;
+    color: rgb(247, 240, 240);
+    margin: 10px;
+    padding: 10px;
+}
+
+.profeFabri{
+    border: $borde-texto;
+    margin: 10px;
+    padding: 10px;
+    height: auto;
+    width: auto;
+}
+
+.profeFabri:hover{
+    transform: scale(1.1);
+}
+.profeFabri{
+    transition: 1.5s;
+}
+ /* FRODI TIPS */
+
+
+ .primerTips, .segundoTips, .tercerTips{
+    padding: 2px;
+    margin: 1px;
+    @extend %borde;
+    margin-top: 5px;
+    .tituloTipsUno, .tituloTipsDos, .tituloTipsTres{
+        color: green;
+        margin: 5px;
+        padding: 5px;
+        @extend %borde;
+        text-align: center;
+        font-family: 'Bungee' cursive;
+    }
+}
+
+.tituloTips{
+        color: #ECF0F1;
+        text-align: center;
+        padding: 10px;
+}
+
+.tipsUno, .tipsDos, .tipsTres{
+    color: rgb(247, 240, 240) ;
+    text-decoration: double;
+    margin: 5px;
+    padding: 2px;
+}
+
+
+.mainTips{
+    @include tips;           
+    }
+      
+.tituloTips{
+    grid-area: mainTitulo;
+}    
+
+.primerTips{
+    grid-area: recuadro;
+}    
+
+.segundoTips{
+    grid-area: recuadroUno;
+}    
+.tercerTips{
+    grid-area: recuadroDos;
+    width: 100%;
+}
+
+
+.imagenTipsUno{
+    grid-area: imagen1;
+    align-self: center;
+}
+
+.imagenTipsDos{
+    grid-area: imagen2;
+    align-self: center;
+}
+
+.imagenTipsTres{
+    grid-area: imagen3;
+    align-self: center;
+}
+
+
+ /* CONTACTO */
+
+ .textoContacto{
+     padding: 5px;
+     margin: 10px;
+     border: $borde-texto;
+     color: rgb(247, 240, 240);
+ }
+
+ .contacto{
+     margin: 10px;
+     padding: 5px;
+     border: $borde-texto;
+     color: rgb(231, 223, 221);
+ }
+
+ .formulario div{
+     margin: 5px;
+     padding: 5px;
+ }
+
+ form{
+     border: none;
+ }
