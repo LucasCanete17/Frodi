@@ -8,8 +8,7 @@ body {
   background-repeat: no-repeat;
   background-color: black;
   background-size: cover;
-  width: 100%;
-  height: 100%; }
+  width: 100%; }
   body .titulo {
     color: white;
     text-align: center;
@@ -36,13 +35,17 @@ main div .imagen {
 .recuadro, .recuadroUno, .recuadroDos {
   padding: 2px;
   margin: 1px;
-  margin-top: 5px; }
+  margin-top: 5px;
+  width: auto; }
   .recuadro .subtituloUno, .recuadroUno .subtituloUno, .recuadroDos .subtituloUno {
     color: green;
     margin: 5px;
     padding: 5px;
     text-align: center;
     font-family: 'Bungee' cursive; }
+
+.imagen {
+  width: 100%; }
 
 .colorParrafo {
   color: #f7f0f0;
@@ -51,13 +54,16 @@ main div .imagen {
   padding: 2px; }
 
 .mainPrincipal {
-  height: 100%;
+  height: 100vh;
+  width: auto;
   display: grid;
   margin: 50px;
-  grid-template-areas: "mainTitulo mainTitulo mainTitulo" "recuadro recuadroUno recuadroDos" "imagen1 imagen2 imagen3";
+  grid-template-areas: "mainTitulo mainTitulo mainTitulo" "recuadro recuadroUno recuadroDos" "imagen1 imagen2 imagen3" "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
   justify-content: center;
-  row-gap: 3rem; }
+  row-gap: 2rem; }
 
 .mainTitulo {
   grid-area: mainTitulo; }
@@ -87,6 +93,10 @@ main div .imagen {
   align-self: center; }
 
 footer {
+  grid-area: footer;
+  align-self: center; }
+
+footer {
   background-color: #266639;
   border: 5px solid black;
   color: black;
@@ -108,7 +118,7 @@ footer {
   .logoRedes:hover .logoRedes {
     transition: 1.5s; }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 600px) {
   .mainPrincipal {
     height: 100vh;
     display: grid;
@@ -141,7 +151,6 @@ footer {
   padding: 10px;
   background-color: black;
   text-align: center;
-  width: 200px;
   color: green; }
 
 .nosotros {
@@ -162,6 +171,24 @@ footer {
 
 .profeFabri {
   transition: 1.5s; }
+
+@media only screen and (max-width: 600px) {
+  .mainNosotros {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "quienSoy" "imagen" "footer";
+    justify-content: center;
+    row-gap: 1rem; }
+  h2, .nosotros {
+    display: none; }
+  .quienSoy {
+    grid-area: quienSoy; }
+  .profeFabri {
+    grid-area: imagen; }
+  footer {
+    grid-area: footer; } }
 
 /* FRODI TIPS */
 .primerTips, .segundoTips, .tercerTips {
@@ -184,7 +211,11 @@ footer {
   color: #f7f0f0;
   text-decoration: double;
   margin: 5px;
-  padding: 2px; }
+  padding: 2px;
+  width: 100%; }
+
+.imagenTipsUno, .imagenTipsDos, .imagenTipsTres {
+  width: 100%; }
 
 .mainTips {
   height: 100%;
@@ -193,6 +224,8 @@ footer {
   grid-template-areas: "mainTitulo mainTitulo mainTitulo" "imagen1 imagen2 imagen3" "recuadro recuadroUno recuadroDos";
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
   row-gap: 3rem; }
 
 .tituloTips {
@@ -205,8 +238,7 @@ footer {
   grid-area: recuadroUno; }
 
 .tercerTips {
-  grid-area: recuadroDos;
-  width: 100%; }
+  grid-area: recuadroDos; }
 
 .imagenTipsUno {
   grid-area: imagen1;
@@ -219,6 +251,26 @@ footer {
 .imagenTipsTres {
   grid-area: imagen3;
   align-self: center; }
+
+@media only screen and (max-width: 600px) {
+  .mainTips {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "imagen1" "imagen2" "imagen3" "footer";
+    justify-content: center;
+    row-gap: 1rem; }
+  h2, .primerTips, .segundoTips, .tercerTips {
+    display: none; }
+  .imagenTipsUno {
+    grid-area: imagen1; }
+  .imagenTipsDos {
+    grid-area: imagen2; }
+  .imagenTipsTres {
+    grid-area: imagen3; }
+  footer {
+    grid-area: footer; } }
 
 /* CONTACTO */
 .textoContacto {

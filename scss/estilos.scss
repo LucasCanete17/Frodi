@@ -8,7 +8,6 @@ body{
     background-color: black;
     background-size: cover;
     width: 100%;
-    height: 100%;
     .titulo{
         color: white;
         text-align: center;
@@ -48,6 +47,7 @@ main{
     margin: 1px;
     @extend %borde;
     margin-top: 5px;
+    width: auto;
     .subtituloUno{
         color: green;
         margin: 5px;
@@ -57,6 +57,11 @@ main{
         font-family: 'Bungee' cursive;
     }
 }
+
+.imagen{
+    width: 100%;
+}
+
 
 .colorParrafo{
     color: rgb(247, 240, 240) ;
@@ -102,6 +107,11 @@ main{
 }
 
 footer{
+    grid-area: footer;
+    align-self: center;
+}
+
+footer{
     background-color: rgb(38, 102, 57);
     border: 5px solid black;
     color: black;
@@ -131,7 +141,7 @@ footer{
 
 // media query
 
-@media only screen and (max-width:900px){
+@media only screen and (max-width:600px){
 
 .mainPrincipal{
     height: 100vh;
@@ -191,7 +201,6 @@ footer{
     background-color: black;
     @extend %borde;
     text-align: center;
-    width: 200px;
     color: green;
 }
 .nosotros{
@@ -215,6 +224,39 @@ footer{
 .profeFabri{
     transition: 1.5s;
 }
+
+@media only screen and (max-width:600px){
+
+.mainNosotros{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "quienSoy"
+                        "imagen"
+                        "footer";
+    justify-content: center;
+    row-gap: 1rem;   
+}                
+
+
+h2, .nosotros{
+    display: none;
+}
+
+.quienSoy{
+    grid-area: quienSoy;
+}
+
+.profeFabri{
+    grid-area: imagen;
+}
+
+footer{
+    grid-area: footer;
+}
+}
+
  /* FRODI TIPS */
 
 
@@ -244,6 +286,12 @@ footer{
     text-decoration: double;
     margin: 5px;
     padding: 2px;
+    width: 100%;
+}
+
+.imagenTipsUno, .imagenTipsDos, .imagenTipsTres{
+    width: 100%;
+
 }
 
 
@@ -264,7 +312,6 @@ footer{
 }    
 .tercerTips{
     grid-area: recuadroDos;
-    width: 100%;
 }
 
 
@@ -281,6 +328,41 @@ footer{
 .imagenTipsTres{
     grid-area: imagen3;
     align-self: center;
+}
+
+@media only screen and (max-width:600px){
+    .mainTips{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "imagen1"
+                            "imagen2"
+                            "imagen3"
+                            "footer";
+        justify-content: center;
+        row-gap: 1rem;                    
+    }
+
+h2, .primerTips, .segundoTips, .tercerTips{
+    display: none;
+}    
+
+.imagenTipsUno{
+    grid-area: imagen1;
+}
+
+.imagenTipsDos{
+    grid-area: imagen2;
+}
+
+.imagenTipsTres{
+    grid-area: imagen3;
+}
+
+footer{
+    grid-area: footer;
+}
 }
 
 

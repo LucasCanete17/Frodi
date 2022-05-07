@@ -2,18 +2,22 @@ $borde-texto: 3px solid green;
 
 
 @mixin grid {
-    height: 100%;
+    height: 100vh;
+    width: auto;
     display: grid;
     margin: 50px;
     grid-template-areas: "mainTitulo mainTitulo mainTitulo"
                         "recuadro recuadroUno recuadroDos"
-                        "imagen1 imagen2 imagen3";
+                        "imagen1 imagen2 imagen3"
+                        "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
     justify-content: center;
-    row-gap: 3rem;
+    row-gap: 2rem;
 }
 
-@mixin tips{
+@mixin tips {
     height: 100%;
     display: grid;
     margin: 50px;
@@ -22,6 +26,8 @@ $borde-texto: 3px solid green;
                         "recuadro recuadroUno recuadroDos";
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
     row-gap: 3rem;
 }
 
