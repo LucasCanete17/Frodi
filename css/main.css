@@ -54,13 +54,11 @@ main div .imagen {
   padding: 2px; }
 
 .mainPrincipal {
-  height: 100vh;
   width: auto;
   display: grid;
   margin: 50px;
   grid-template-areas: "mainTitulo mainTitulo mainTitulo" "recuadro recuadroUno recuadroDos" "imagen1 imagen2 imagen3" "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-row-gap: 10px;
   grid-column-gap: 10px;
   justify-content: center;
   row-gap: 2rem; }
@@ -120,10 +118,10 @@ footer {
 
 @media only screen and (max-width: 600px) {
   .mainPrincipal {
-    height: 100vh;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.3fr 0.3fr auto;
     grid-template-areas: "recuadro recuadroUno" "imagen1 imagen2" "footer footer";
     justify-content: center;
     row-gap: 3rem; }

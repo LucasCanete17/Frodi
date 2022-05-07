@@ -2,7 +2,6 @@ $borde-texto: 3px solid green;
 
 
 @mixin grid {
-    height: 100vh;
     width: auto;
     display: grid;
     margin: 50px;
@@ -11,7 +10,6 @@ $borde-texto: 3px solid green;
                         "imagen1 imagen2 imagen3"
                         "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 10px;
     grid-column-gap: 10px;
     justify-content: center;
     row-gap: 2rem;
