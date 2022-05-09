@@ -141,7 +141,7 @@ footer{
 
 // media query
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:768px){
 
 .mainPrincipal{
     height: auto;
@@ -196,51 +196,99 @@ footer{
 /* NOSOTROS */
 
 .quienSoy{
-    margin: 10px;
-    padding: 10px;
+    width: auto;
+    margin: 5px;
+    padding: 5px;
     background-color: black;
     @extend %borde;
     text-align: center;
     color: green;
 }
 .nosotros{
-    border: $borde-texto;
+    @extend %borde;
     color: rgb(247, 240, 240);
     margin: 10px;
     padding: 10px;
-}
-
-.profeFabri{
-    border: $borde-texto;
-    margin: 10px;
-    padding: 10px;
-    height: auto;
     width: auto;
 }
 
+.profeFabri {
+    border: $borde-texto;
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+}
+
 .profeFabri:hover{
-    transform: scale(1.1);
+    transform: scale(0.9);
 }
 .profeFabri{
     transition: 1.5s;
 }
 
-@media only screen and (max-width:600px){
+.mainNosotros{
+    height: 100%;
+    width: auto;
+    display: grid;
+    margin: 5px;
+    grid-template-areas: "titulo titulo titulo"
+                        "parrafo parrafo parrafo"
+                        "imagen1 imagen2 imagen3"
+                        "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    justify-content: center;
+    row-gap: 2rem;                              
+                        
+}
+
+h2{
+    display: none;
+}
+
+.quienSoy{
+    grid-area: titulo;
+}
+
+.nosotros{
+    grid-area: parrafo;
+    
+}
+
+.imagenUno{
+    grid-area: imagen1;
+}
+
+.imagenDos{
+    grid-area: imagen2;
+}
+
+.imagenTres{
+    grid-area: imagen3;
+}
+
+footer{
+    grid-area: footer;
+}
+
+
+@media only screen and (max-width:768px){
 
 .mainNosotros{
-    height: 100vh;
+    height: 100%;
+    width: auto;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "quienSoy"
-                        "imagen"
-                        "footer";
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 0.3fr 0.3fr;
+    grid-template-areas: "quienSoy quienSoy"
+                        "imagen1 imagen2"
+                        "footer footer";
     justify-content: center;
-    row-gap: 1rem;   
+    row-gap: 3rem;   
 }                
 
 
-h2, .nosotros{
+h2, .nosotros, .imagenTres{
     display: none;
 }
 
@@ -248,8 +296,12 @@ h2, .nosotros{
     grid-area: quienSoy;
 }
 
-.profeFabri{
-    grid-area: imagen;
+.imagenUno{
+    grid-area: imagen1;
+}
+
+.imagenDos{
+    grid-area: imagen2;
 }
 
 footer{
@@ -330,9 +382,9 @@ footer{
     align-self: center;
 }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:768px){
     .mainTips{
-        height: 100vh;
+        height: 100%;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
