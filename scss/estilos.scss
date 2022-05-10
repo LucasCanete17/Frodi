@@ -143,21 +143,25 @@ footer{
 
 @media only screen and (max-width:768px){
 
-.mainPrincipal{
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.3fr 0.3fr auto;
-    grid-template-areas: "recuadro recuadroUno"
-                          "imagen1 imagen2"
-                          "footer footer";                      
-    justify-content: center;
-    row-gap: 3rem;            
+    .mainPrincipal{
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.3fr 0.3fr auto auto;
+        grid-template-areas: "titulo titulo"
+                             "recuadro recuadroUno"
+                             "imagen1 imagen2"
+                             "footer footer";                      
+        justify-content: center;
+        row-gap: 3rem;            
     
+    }
+
+.mainTitulo{
+    display: block;
 }
 
-
-h2{
+h1{
     display: none;
 }
 
@@ -169,22 +173,31 @@ h2{
     display: none;
 }
 
+.mainTitulo{
+    grid-area: titulo;
+}
+
 .recuadro{
     grid-area: recuadro;
     font-size: 1rem;
+    
+
 }
 
 .recuadroUno{
     grid-area: recuadroUno;
+    
 }
 
 .multimediaUno{
     grid-area: imagen1;
+    width: auto;
     
 }
 
 .multimediaDos{
     grid-area: imagen2;
+    width: auto;
     
 }
 
@@ -192,6 +205,56 @@ footer{
     grid-area: footer;
 }
 }
+
+
+@media only screen and (max-width:480px){
+    .mainPrincipal{
+        height: 100%;
+        width: auto;
+        display: grid;
+        grid-template-columns:  1fr;
+        grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr auto;
+        grid-template-areas: "titulo"
+                             "imagen1"
+                             "imagen2"
+                             "imagen3"
+                              "footer";                      
+        justify-content: center;
+        row-gap: 3rem;
+        
+    }
+
+.multimediaTres, .mainTitulo{
+    display: block;
+}    
+
+.titulo, .recuadro, .recuadroUno, .recuadroDos{
+    display: none;
+}
+
+.mainTitulo{
+    grid-area: titulo;
+    justify-content: center;
+}
+
+.multimediaUno{
+    grid-area: imagen1;
+}
+
+.multimediaDos{
+    grid-area: imagen2;
+}
+
+.multimediaTres{
+    grid-area: imagen3;
+}
+
+footer{
+    grid-area: footer;
+}
+
+}
+
 
 /* NOSOTROS */
 
