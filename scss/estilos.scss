@@ -70,6 +70,7 @@ main{
     padding: 2px;
 }
 
+
 .mainPrincipal{
     @include grid;
 }
@@ -304,8 +305,7 @@ footer{
     row-gap: 2rem;                              
                         
 }
-
-h2, .presentacion{
+.presentacion, .tituloNosotros{
     display: none;
 }
 
@@ -351,7 +351,7 @@ footer{
 }                
 
 
-h2, .nosotros, .imagenTres, .presentacion{
+.tituloNosotros, .nosotros, .imagenTres, .presentacion{
     display: none;
 }
 
@@ -504,7 +504,7 @@ footer{
         row-gap: 1rem;                    
     }
 
-h2, .primerTips, .segundoTips, .tercerTips{
+.tituloTips, .primerTips, .segundoTips, .tercerTips{
     display: none;
 }    
 

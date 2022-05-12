@@ -213,7 +213,7 @@ footer {
   justify-content: center;
   row-gap: 2rem; }
 
-h2, .presentacion {
+.presentacion, .tituloNosotros {
   display: none; }
 
 .quienSoy {
@@ -244,7 +244,7 @@ footer {
     grid-template-areas: "quienSoy quienSoy" "imagen1 imagen2" "footer footer";
     justify-content: center;
     row-gap: 3rem; }
-  h2, .nosotros, .imagenTres, .presentacion {
+  .tituloNosotros, .nosotros, .imagenTres, .presentacion {
     display: none; }
   .quienSoy {
     grid-area: quienSoy; }
@@ -354,7 +354,7 @@ footer {
     grid-template-areas: "imagen1" "imagen2" "imagen3" "footer";
     justify-content: center;
     row-gap: 1rem; }
-  h2, .primerTips, .segundoTips, .tercerTips {
+  .tituloTips, .primerTips, .segundoTips, .tercerTips {
     display: none; }
   .imagenTipsUno {
     grid-area: imagen1; }
