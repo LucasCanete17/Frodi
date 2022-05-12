@@ -213,7 +213,7 @@ footer {
   justify-content: center;
   row-gap: 2rem; }
 
-h2 {
+h2, .presentacion {
   display: none; }
 
 .quienSoy {
@@ -244,10 +244,38 @@ footer {
     grid-template-areas: "quienSoy quienSoy" "imagen1 imagen2" "footer footer";
     justify-content: center;
     row-gap: 3rem; }
-  h2, .nosotros, .imagenTres {
+  h2, .nosotros, .imagenTres, .presentacion {
     display: none; }
   .quienSoy {
     grid-area: quienSoy; }
+  .imagenUno {
+    grid-area: imagen1; }
+  .imagenDos {
+    grid-area: imagen2; }
+  footer {
+    grid-area: footer; } }
+
+@media only screen and (max-width: 480px) {
+  .mainNosotros {
+    height: 100%;
+    width: 460px;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 0.1fr 0.1fr auto auto 0.1fr;
+    grid-template-areas: "quienSoy" "texto"    "imagen1" "imagen2" "footer";
+    justify-content: center;
+    row-gap: 3rem; }
+  .quiensoy {
+    grid-area: quienSoy; }
+  .presentacion {
+    display: block;
+    grid-area: texto;
+    background-color: black;
+    color: #f7f0f0;
+    margin: 1px;
+    padding: 10px;
+    border: solid green 4px;
+    border-radius: 10px; }
   .imagenUno {
     grid-area: imagen1; }
   .imagenDos {
@@ -343,6 +371,9 @@ footer {
   margin: 10px;
   border: 3px solid green;
   color: #f7f0f0; }
+
+h2 {
+  display: block; }
 
 .contacto {
   margin: 10px;
